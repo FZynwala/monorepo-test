@@ -1,0 +1,7 @@
+{
+    "name": "@monorepo-test/fz-shared",
+    "version": "1.0.0",
+    "description": "common features",
+    "main": "index.js",
+    "license": "MIT"
+}

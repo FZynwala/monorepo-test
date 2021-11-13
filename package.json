@@ -1,0 +1,14 @@
+{
+    "name": "root",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "devDependencies": {
+        "lerna": "^4.0.0"
+    },
+    "resolutions": {
+        "babel-jest": "26.6.3",
+        "eslint": "^7.11.0"
+    }
+}

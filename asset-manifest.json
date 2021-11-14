@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/monorepo-test/static/css/main.1d3c4bbc.chunk.css",
+    "main.js": "/monorepo-test/static/js/main.94f68ba1.chunk.js",
+    "main.js.map": "/monorepo-test/static/js/main.94f68ba1.chunk.js.map",
+    "runtime-main.js": "/monorepo-test/static/js/runtime-main.b297ebf1.js",
+    "runtime-main.js.map": "/monorepo-test/static/js/runtime-main.b297ebf1.js.map",
+    "static/js/2.8b1f536d.chunk.js": "/monorepo-test/static/js/2.8b1f536d.chunk.js",
+    "static/js/2.8b1f536d.chunk.js.map": "/monorepo-test/static/js/2.8b1f536d.chunk.js.map",
+    "static/js/3.1540baf6.chunk.js": "/monorepo-test/static/js/3.1540baf6.chunk.js",
+    "static/js/3.1540baf6.chunk.js.map": "/monorepo-test/static/js/3.1540baf6.chunk.js.map",
+    "index.html": "/monorepo-test/index.html",
+    "static/css/main.1d3c4bbc.chunk.css.map": "/monorepo-test/static/css/main.1d3c4bbc.chunk.css.map",
+    "static/js/2.8b1f536d.chunk.js.LICENSE.txt": "/monorepo-test/static/js/2.8b1f536d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b297ebf1.js",
+    "static/js/2.8b1f536d.chunk.js",
+    "static/css/main.1d3c4bbc.chunk.css",
+    "static/js/main.94f68ba1.chunk.js"
+  ]
+}

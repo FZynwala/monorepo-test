@@ -9,7 +9,7 @@ const App = () => {
             <ExampleComponent
                 text={toUpperCase('Create React Library Example 😄')}
             />
-            <ExampleComponent text={logGreeting('Jadwiga Chymel 😄😄')} />
+            <ExampleComponent text={logGreeting('Jadwiga Chymel 😄')} />
         </>
     );
 };

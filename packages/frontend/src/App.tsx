@@ -7,7 +7,7 @@ const App = () => {
     return (
         <>
             <ExampleComponent
-                text={toUpperCase('Create React Library Example 😄')}
+                text={toUpperCase('Create React Library Example 😄😄')}
             />
             <ExampleComponent text={logGreeting('Jadwiga Chymel 😄😄')} />
         </>

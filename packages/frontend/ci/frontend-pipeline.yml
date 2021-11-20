@@ -2,14 +2,14 @@ resources:
     - name: repo
       type: git
       source:
-          uri: https://FZynwala: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@github.com/FZynwala/monorepo-test.git
+          uri: https://FZynwala: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@github.com/FZynwala/monorepo-test.git
 
 jobs:
-    - name: hello-world-job
+    - name: deploy-frontend-job
       plan:
           - get: repo
             trigger: true # tell Concourse to trigger this job when new versions are emitted
-          - task: hello-world-task
+          - task: deploy-frontend-task
             config:
                 platform: linux
                 image_resource:

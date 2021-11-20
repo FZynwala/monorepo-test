@@ -7,6 +7,7 @@ const App = () => {
             <div className={'test'}>Create React Library Example 😄</div>
             <div className={'test'}>Jadwiga Chymel 😄</div>
             <div className={'test'}>Jan Fasola 😄</div>
+            <div className={'test'}>Henryk Wiemjategonie 😄</div>
         </div>
     );
     // return (

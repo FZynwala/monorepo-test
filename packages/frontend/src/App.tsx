@@ -1,17 +1,21 @@
-import { logGreeting, toUpperCase } from '@monorepo-test/fz-shared';
 import React from 'react';
-import { ExampleComponent } from 'ui-components';
-import 'ui-components/dist/index.css';
+import './App.css';
 
 const App = () => {
     return (
-        <>
-            <ExampleComponent
-                text={toUpperCase('Create React Library Example 😄')}
-            />
-            <ExampleComponent text={logGreeting('Jadwiga Chymel 😄')} />
-        </>
+        <div>
+            <div className={'test'}>Create React Library Example 😄</div>
+            <div className={'test'}>Jadwiga Chymel 😄😄😄</div>
+        </div>
     );
+    // return (
+    //     <>
+    //         <ExampleComponent
+    //             text={toUpperCase('Create React Library Example 😄')}
+    //         />
+    //         <ExampleComponent text={logGreeting('Jadwiga Chymel 😄')} />
+    //     </>
+    // );
 };
 
 export default App;

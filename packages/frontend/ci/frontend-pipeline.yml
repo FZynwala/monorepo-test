@@ -24,9 +24,10 @@ jobs:
                     args:
                         - -cx
                         - |
-                            git config --global user.email "filipzynwala@gmail.com"
-                            git config --global user.name "FZynwala"
+                            git config --global user.email "((github_user_email))"
+                            git config --global user.name "((github_user_name))"
                             cd repo
+                            ls
                             yarn
                             cd packages/frontend
                             yarn build

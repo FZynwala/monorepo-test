@@ -11,6 +11,8 @@
 # production
 /build
 
+/ci/vars.yml
+
 # misc
 .DS_Store
 .env.local

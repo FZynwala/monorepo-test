@@ -2,7 +2,7 @@ resources:
     - name: repo
       type: git
       source:
-          uri: https://FZynwala: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@github.com/FZynwala/monorepo-test.git
+          uri: https://FZynwala:<github_access_token>@github.com/FZynwala/monorepo-test.git
 
 jobs:
     - name: deploy-frontend-job

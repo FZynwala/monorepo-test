@@ -4,6 +4,10 @@
     "workspaces": [
         "packages/*"
     ],
+    "scripts": {
+        "start:be": "lerna run --scope '@monorepo-test/backend' start --stream",
+        "start:fe": "lerna run --scope '@monorepo-test/frontend' start --stream"
+    },
     "devDependencies": {
         "lerna": "^4.0.0"
     },

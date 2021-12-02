@@ -28,6 +28,6 @@ jobs:
                             git config --global user.name "((github_user_name))"
                             cd repo
                             yarn
-                            cd packages/frontend
                             yarn build
+                            cd packages/frontend
                             yarn deploy

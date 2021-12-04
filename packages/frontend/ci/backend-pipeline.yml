@@ -1,0 +1,38 @@
+resources:
+    - name: repo
+      type: git
+      source:
+          uri: https://FZynwala:((github_access_token))@github.com/FZynwala/monorepo-test.git
+
+jobs:
+    - name: deploy-backend-job
+      plan:
+          - get: repo
+            trigger: true # tell Concourse to trigger this job when new versions are emitted
+          - task: deploy-backend-task
+            config:
+                platform: linux
+                image_resource:
+                    type: registry-image
+                    source:
+                        repository: node
+                        tag: 14.17.0
+                inputs: # add the get step as an input to this task
+                    - name: repo
+                run: # read the file from the get step
+                    path: sh
+                    args:
+                        - -cx
+                        - |
+                            git config --global user.email "((github_user_email))"
+                            git config --global user.name "((github_user_name))"
+                            cd repo
+                            yarn
+                            yarn build
+                            cd packages/nest-server
+                            cat > /root/.netrc <<EOF
+                            machine git.heroku.com
+                              login ((HEROKU_EMAIL))
+                              password ((HEROKU_TOKEN))
+                            EOF
+                            git push heroku master

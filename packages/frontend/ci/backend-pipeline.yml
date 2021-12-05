@@ -22,17 +22,22 @@ jobs:
                 run: # read the file from the get step
                     path: sh
                     args:
-                        - -cx
+                        - -exc
                         - |
-                            git config --global user.email "((github_user_email))"
-                            git config --global user.name "((github_user_name))"
-                            cd repo
-                            yarn
-                            yarn build
-                            cd packages/nest-server
-                            cat > /root/.netrc <<EOF
+                            curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+                            cat > ~/.netrc <<EOF
+                            machine git.heroku.com
+                              login ((HEROKU_EMAIL))
+                              password ((HEROKU_TOKEN))
                             machine git.heroku.com
                               login ((HEROKU_EMAIL))
                               password ((HEROKU_TOKEN))
                             EOF
+                            cat ~/.netrc
+                            heroku login
+                            cd repo
+                            ls
+                            yarn
+                            cd packages/nest-server
+                            heroku git:remote -a nest-server-test-app
                             git push heroku master

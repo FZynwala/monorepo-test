@@ -24,6 +24,8 @@ jobs:
                     args:
                         - -exc
                         - |
+                            git config --global user.email "((github_user_email))"
+                            git config --global user.name "((github_user_name))"
                             curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
                             cat > ~/.netrc <<EOF
                             machine git.heroku.com
@@ -34,10 +36,14 @@ jobs:
                               password ((HEROKU_TOKEN))
                             EOF
                             cat ~/.netrc
-                            heroku login
+                            HEROKU_API_KEY='((HEROKU_TOKEN))' heroku run ls --app nest-server-test-app
                             cd repo
                             ls
                             yarn
                             cd packages/nest-server
-                            heroku git:remote -a nest-server-test-app
+                            ls
+                            HEROKU_API_KEY='((HEROKU_TOKEN))' heroku git:remote -a nest-server-test-app
+                            git status
+                            git add --all
+                            git commit -m "deploy"
                             git push heroku master
